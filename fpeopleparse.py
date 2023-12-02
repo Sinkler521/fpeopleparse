@@ -4,7 +4,7 @@ from parser import FpeopleParser as Fparser
 if __name__ == '__main__':
     # initialize argparse object
     argshndl = ArgumentsHandler()
-    output_dir, argument_links = argshndl.handle_arguments() # get links depending on arguments
+    output_dir, argument_links = argshndl.handle_arguments()  # get links depending on arguments
 
     # initialize parser object
     parser = Fparser(output_dir)

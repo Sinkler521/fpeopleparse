@@ -1,7 +1,8 @@
 import argparse
-from phone_codes import phone_codes
+from input.phone_codes import phone_codes
 
-class ArgumentsHandler: # NEED TO RETURN FINAL URL FOR EACH ITERATION
+
+class ArgumentsHandler:
     def __init__(self):
         self.arghandler = argparse.ArgumentParser(description='To run program with arguments')
         self.__initialize_arguments(self.arghandler)
@@ -32,6 +33,8 @@ class ArgumentsHandler: # NEED TO RETURN FINAL URL FOR EACH ITERATION
             result = self.search_by_phone(state_name)
             print('Phones numbers generated')
             return f'output/{args.outdir}', result
+
+        # TODO continue if statement for name and surname. Search can be either or, so do not use both name-surname and phone
 
     def __generate_numbers_partial(self, area_code):
         result_list = []
